@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Navigation Bar">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="David Talone">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NavBar</title>
+        <style>
+            nav {
+                display: flex;
+                background-color: #333;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+            }
+
+            nav .Logo {
+                margin-left: 20px;
+                font-size: 24px;
+            }
+            
+            ul {
+                display: flex;
+                list-style-type: none;
+            }
+
+            li a {
+                padding: 14px 16px;
+                text-decoration: none;
+                color: white;
+                
+                
+            }
+
+            li a:hover {
+                background-color: gray;
+                color: blue;
+            }
+
+            @media (max-width: 600px) {
+                nav {
+                    flex-direction: column;
+                    width: auto;
+                    padding-right: 40px;
+                }
+
+                nav .Logo {
+                    align-items: center;
+                    padding: 10px;
+                }
+
+                nav ul {
+                    flex-direction: column;
+                    padding-right: 100px;
+                }
+
+                nav li {
+                    padding-bottom: 15px;
+                }
+            }
+
+            
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="Logo">Logo</div>
+                <div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutme.html">About</a></li>
+                        <li><a href="about.asp">Services</a></li>
+                        <li><a href="blog.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </body>
+
+</html>
