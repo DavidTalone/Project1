@@ -1,55 +1,171 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-div.group {
-
-}
-
-div.middle {
-  
-}
-
-div.grid-header {
-  display: grid;
-  gap: 50px 0px;
-  position: sticky;
-  top: 1px;
-
-  grid-template-areas: "nav nav nav nav"
-}
-
-div.container {
-  display: grid;
-  gap: 50px 0px;
-
-  grid-template-areas: "info info info"
-                       ". card ."
-                       "info info info"
-}
-
-
-
-a.nav {
+nav {
+  display: flex;
   background-color: #333;
+  justify-content: space-between;
+  align-items: center;
   color: white;
-  text-align: center;
+}
+
+nav .Logo {
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+li a {
   padding: 14px 16px;
   text-decoration: none;
+  color: white;
+}
+
+li a:hover {
+  background-color: gray;
+  color: blue;
+}
+
+body {
+  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main article.above {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: darkgray;
+  height: 25vh;
+  flex-grow: 1;
+  padding: 1em;
+}
+
+main article.above header {
+  color: red;
+  animation: colorswitch 10s ease 2s infinite;
+}
+
+main article.above p {
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: large;
+  font-weight: 800;
+}
+
+main article.above button {
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: large;
+  font-weight: 400;
+  color: white;
+  background-color: red;
+  animation: buttoncolorswitch 10s ease 2s infinite;
+}
+
+main article.above button a {
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+main article.below {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background: white;
+  height: 15vh;
+  flex-grow: 1;
+  padding: 1em;
+}
+
+/* Taken From W3Schools and then edited */
+div.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  height: 200px;
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+/* Taken From W3Schools */
+div.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Taken From W3Schools */
+div .container {
+  padding: 2px 16px;
+}
+
+footer {
+  display: flex;
+  margin-top: auto;
+  background-color: #333;
+  height: 75px;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav {
+      flex-direction: column;
+      width: auto;
+      padding-right: 40px;
+  }
+
+  nav .Logo {
+      align-items: center;
+      padding: 10px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      padding-right: 100px;
+  }
+
+  nav li {
+      padding-bottom: 15px;
+  }
+
+  main article {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20vw;
+  }
+
+  main aside {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20vw;
+  }
+}
+
+@keyframes colorswitch {
+  0% {color:red}
+  20% {color: blueviolet}
+  40% {color:lightskyblue}
+  60% {color: green}
+  80% {color:orange}
+  100% {color:red}
+}
+
+@keyframes buttoncolorswitch {
+  0% {background-color:red}
+  20% {background-color: blueviolet}
+  40% {background-color:lightskyblue}
+  60% {background-color: green}
+  80% {background-color:orange}
+  100% {background-color:red}
 }
