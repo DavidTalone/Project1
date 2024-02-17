@@ -123,6 +123,25 @@ footer a {
   color: white;
 }
 
+/*About Me Start*/
+main div h2 {
+  
+  margin-right: 5vh;
+}
+
+img#sun {
+  position:absolute;
+  animation: sunMovement 5s ease infinite;
+}
+
+body {
+  animation: skyColor 5s ease infinite;
+}
+
+h2, h3 {
+  animation: skyTextColor 5s ease infinite;
+}
+
 @media (max-width: 600px) {
   nav {
       flex-direction: column;
@@ -143,6 +162,10 @@ footer a {
   nav li {
       padding-bottom: 15px;
   }
+
+  main div {
+    margin-top: -150px;
+  }
 }
 
 @keyframes colorswitch {
@@ -161,4 +184,22 @@ footer a {
   60% {background-color: green}
   80% {background-color:orange}
   100% {background-color:red}
+}
+
+@keyframes sunMovement {
+  0% {left: 0; top: 10%;}
+  50% {left: 35%; top: 0;}
+  100% {left: 70%; top: 10%;}
+}
+
+@keyframes skyColor {
+  0% {background-color: skyblue;}
+  50% {background-color: lightblue;}
+  100% {background-color: black;}
+}
+
+@keyframes skyTextColor {
+  0% {color: black;}
+  50% {color: black;}
+  100% {color: orange;}
 }
