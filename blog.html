@@ -5,40 +5,88 @@
         <link rel="stylesheet" href="common_style.css">
 
     </head>
-    <body style="background-color: lightskyblue;">
+    <body style="background-color: rgb(192, 216, 231);">
         <header>
             <nav>
                 <div class="Logo">Logo</div>
                 <div>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutme.html" class="active">About</a></li>
-                        <li><a href="about.asp">Services</a></li>
-                        <li><a href="blog.html">Contact</a></li>
+                        <li><a href="aboutme.html">About</a></li>
+                        <li><a href="cool.html">Services</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <main style= "flex-direction: column;">
-            
-            <img id="sun" src="Picture.jpg" alt="Me" style="max-width: 200px; max-height: 200px; border-radius: 50%; box-shadow: 5px 5px 8px 1px black,
-            12px 12px 8px 2px yellow; margin-top: 175px;">
-            
-            <div style="display: flex; justify-content: space-evenly; margin-top: 375px;">
-                <div>
-                    <h1 style="color: orangered; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">DAVID TALONE</h1>
-                    <h2>Mathematics and Computer Science Major at Siena College</h2>
-                    <button style="background-color: orangered; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                        <a style="color: white; text-decoration:none" href="DavidTaloneResume.pdf" target="_blank">Resume</a>
-                    </button>
-                </div>  
-                <div>
-                    <h1 style="color: orangered; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Email:</h1>
-                    <h3><address>dv24talo@siena.edu</address></h3>
-                    <h1 style="color: orangered; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Phone:</h1>
-                    <h3><em>(518)944-5273</em></h3>
+        <main>
+                <div class="blog-body">
+                    <section class="blog-content" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                        <div class="card" style="margin-left: 20px; margin-top: 20px;">
+                            <img src="https://library.sportingnews.com/styles/twitter_card_120x120/s3/2023-05/boot-on-soccer-ball-generic-b.jpg?itok=EYu2U17L" alt="Soccer" style="width:100%">
+                            <div class="container">
+                              <h4><b>Soccer</b></h4>
+                              <p>Fun Now</p>
+                            </div>
+                        </div>
+                        <div class="card" style="margin-left: 20px; margin-top: 20px;">
+                            <img src="https://plhswave.org/wp-content/uploads/2018/11/Learning.jpg" alt="School" style="width:100%; height:45%;">
+                            <div class="container">
+                              <h4><b>School Life</b></h4>
+                              <p>High School</p>
+                            </div>
+                        </div>
+                        <div class="card" style="margin-left: 20px; margin-top: 20px;">
+                            <img src="https://plhswave.org/wp-content/uploads/2018/11/Learning.jpg" alt="School" style="width:100%; height:45%;">
+                            <div class="container">
+                              <h4><b>School Life</b></h4>
+                              <p>College</p>
+                            </div>
+                        </div>
+                        <div class="card" style="margin-left: 20px; margin-top: 20px;">
+                            <img src="https://createyourcareerpath.com/wp-content/uploads/2015/04/defining-accomplishments.jpg" alt="Accomplishments" style="width:100%; height: 45%;">
+                            <div class="container">
+                              <h4><b>Accomplishments</b></h4>
+                              <p>Putnam</p>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="sidebar-left sidebar">
+                        <h1 style="margin-left: 5px;">Ads</h1>
+                        <p style="margin-left: 5px;">Professor C. Rocks!</p>
+                        <p style="margin-left: 5px;">Professor C. Rocks!</p>
+                        <p style="margin-left: 5px;">Professor C. Rocks!</p>
+                        <p style="margin-left: 5px;">Professor C. Rocks!</p>
+                        <p style="margin-left: 5px;">Professor C. Rocks!</p>
+                        <button style="margin-left: 5px;">Remove Ads</button>
+                    </div>
+                    <div class="sidebar-right sidebar">
+                        <h1>Topics</h1>
+                        <ul style="display: flex; list-style-type: circle; flex-direction: column;">
+                            <li class="blog">School life</li>
+                            <ul style="display: flex; list-style-type: circle; flex-direction: column;">
+                                <li class="blog">College</li>
+                                <li class="blog">Pre College</li>
+                            </ul>
+                            <li class="blog">Soccer</li>
+                            <ul style="display: flex; list-style-type: circle; flex-direction: column;">
+                                <li class="blog">Teams</li>
+                                <li class="blog">Positions</li>
+                                <li class="blog">Fun now</li>
+                            </ul>
+                            </li class="blog">
+                            <li class="blog">Accomplishments</li>
+                            <ul style="display: flex; list-style-type: circle; flex-direction: column;">
+                                <li class="blog">Putnam</li>
+                                <li class="blog">GPA</li>
+                                <li class="blog">Awards</li>
+                            </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
         </main>
+        <footer>
+            <a href="https://github.com/DavidTalone">Git hub link</a>
+        </footer>
     </body>
 </html>

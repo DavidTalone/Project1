@@ -87,7 +87,7 @@ main article.below {
   justify-content: space-evenly;
   flex-wrap: wrap;
   background: white;
-  height: 15vh;
+  height: 26vh;
   padding: 1em;
 }
 
@@ -98,6 +98,7 @@ div.card {
   height: 200px;
   width: 150px;
   margin-bottom: 10px;
+  background-color: white;
 }
 
 /* Taken From W3Schools */
@@ -134,12 +135,101 @@ img#sun {
   animation: sunMovement 5s ease infinite;
 }
 
-body {
+body.aboutMe {
   animation: skyColor 5s ease infinite;
 }
 
 h2, h3 {
   animation: skyTextColor 5s ease infinite;
+}
+
+/*Blog Start*/
+.blog-body {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+
+.blog-content {
+	flex: 1 1 auto;
+  height: 65vh;
+}
+
+.sidebar-left {
+	order: -1;
+  background-color:floralwhite;
+  height:40vh;
+}
+
+.sidebar-right {
+	padding-left: 20px;
+  background-color:floralwhite;
+  height:40vh;
+}
+
+.sidebar-right li {
+  text-decoration: underline;
+}
+
+/*Cool Start*/
+p.Cool {
+  border-style: solid; 
+  background-color: black;
+  padding: 10px;
+  transition: 1s;
+}
+
+p.Cool1 {
+  border-style: solid; 
+  background-color: black;
+  padding: 10px;
+  transition: 3s;
+}
+
+footer h1.Cool {
+  color: white;
+}
+
+main article.above div p.Cool {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: large;
+  font-weight: 800;
+}
+
+p.Cool:hover {
+  background-color: yellow;
+}
+
+p.Cool1:hover {
+  box-shadow: inset 300px 0 0 0 lightblue;
+  color: black;
+}
+
+button.Cool2 {
+  animation-name: my-animation;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  border-radius: 10px;
+  position: relative; 
+  color: white;
+
+}
+
+@media (min-width: 600px) {
+	.blog-body {
+		flex-direction: row;
+	}
+
+	.sidebar {
+		flex: 0 0 175px;
+	}
+
+  .sidebar-right, .sidebar-left,
+  .blog-content {
+    height: 125vh;
+  }
 }
 
 @media (max-width: 600px) {
@@ -163,7 +253,7 @@ h2, h3 {
       padding-bottom: 15px;
   }
 
-  main div {
+  main div.about {
     margin-top: -150px;
   }
 }
@@ -202,4 +292,17 @@ h2, h3 {
   0% {color: black;}
   50% {color: black;}
   100% {color: orange;}
+}
+
+@keyframes my-animation {
+  0% {
+    background-color: red;
+    width: 300px;
+    top: 10px;
+  }
+  100% {
+    background-color: blue;
+    width: 50px;
+    top: 200px;
+  }
 }
